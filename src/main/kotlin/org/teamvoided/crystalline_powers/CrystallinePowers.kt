@@ -4,6 +4,7 @@ import net.minecraft.util.Identifier
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.teamvoided.crystalline_powers.init.CryItems
+import org.teamvoided.crystalline_powers.init.CryTabs
 
 @Suppress("unused")
 object CrystallinePowers {
@@ -15,6 +16,7 @@ object CrystallinePowers {
     fun commonInit() {
         log.info("Hello from Common")
         CryItems.init()
+        CryTabs.init()
     }
 
     fun clientInit() {
