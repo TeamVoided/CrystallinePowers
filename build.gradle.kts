@@ -24,15 +24,22 @@ val curse_id: String? by project
 repositories {
     maven("https://teamvoided.org/releases")
     mavenCentral()
+
+    maven("https://maven.terraformersmc.com/") {
+        name = "TerraformersMC"
+    }
+    maven("https://maven.ladysnake.org/releases") {
+        name = "Ladysnake Libs"
+    }
 }
 
 modSettings {
     modId(modid)
     modName(mod_name)
 
-    entrypoint("main", "org.teamvoided.template.Template::commonInit")
-    entrypoint("client", "org.teamvoided.template.Template::clientInit")
-    entrypoint("fabric-datagen", "org.teamvoided.template.TemplateData")
+    entrypoint("main", "org.teamvoided.crystalline_powers.CrystallinePowers::commonInit")
+    entrypoint("client", "org.teamvoided.crystalline_powers.CrystallinePowers::clientInit")
+    entrypoint("fabric-datagen", "org.teamvoided.crystalline_powers.CrystallinePowersData")
     mixinFile("$modid.mixins.json")
 
 //    accessWidener("$modid.accesswidener")
@@ -41,6 +48,7 @@ modSettings {
 dependencies {
     modImplementation(fileTree("libs"))
     modImplementation(libs.farrow)
+    modImplementation(libs.trinkets)
 
 }
 

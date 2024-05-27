@@ -1,8 +1,8 @@
-projectTitle = "Team Voided Template"
-modId = "template"
-githubRepo = "Teamvoided/TeamVoidedTemplateMod"
+projectTitle = "CrystallinePowers"
+modId = "crystalline_powers"
+githubRepo = "Teamvoided/CrystallinePowers"
 discordServerInviteId = "KZ5Q364hEg"
-authors = [ "brokenfuse", "theendercore" ]
+authors = [ "Astra", "TheEnderCore" ]
 majorMinecraftVersion = "1.20"
 minecraftVersion = "1.20.6"
 fabricLoaderVersion = "0.15.11"

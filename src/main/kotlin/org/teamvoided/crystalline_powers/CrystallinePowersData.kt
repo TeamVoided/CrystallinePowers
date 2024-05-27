@@ -1,11 +1,11 @@
-package org.teamvoided.template
+package org.teamvoided.crystalline_powers
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
 import net.minecraft.registry.RegistrySetBuilder
-import org.teamvoided.template.Template.log
+import org.teamvoided.crystalline_powers.CrystallinePowers.log
 
-class TemplateData : DataGeneratorEntrypoint {
+class CrystallinePowersData : DataGeneratorEntrypoint {
     override fun onInitializeDataGenerator(gen: FabricDataGenerator) {
         log.info("Hello from DataGen")
         val pack = gen.createPack()
