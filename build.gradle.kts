@@ -39,7 +39,7 @@ modSettings {
 
     entrypoint("main", "org.teamvoided.crystalline_powers.CrystallinePowers::commonInit")
     entrypoint("client", "org.teamvoided.crystalline_powers.CrystallinePowers::clientInit")
-    entrypoint("fabric-datagen", "org.teamvoided.crystalline_powers.CrystallinePowersData")
+    entrypoint("fabric-datagen", "org.teamvoided.crystalline_powers.data.gen.CrystallinePowersData")
     mixinFile("$modid.mixins.json")
 
 //    accessWidener("$modid.accesswidener")

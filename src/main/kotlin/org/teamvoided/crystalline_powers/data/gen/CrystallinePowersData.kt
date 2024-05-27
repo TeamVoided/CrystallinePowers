@@ -1,4 +1,4 @@
-package org.teamvoided.crystalline_powers
+package org.teamvoided.crystalline_powers.data.gen
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
@@ -9,7 +9,7 @@ class CrystallinePowersData : DataGeneratorEntrypoint {
     override fun onInitializeDataGenerator(gen: FabricDataGenerator) {
         log.info("Hello from DataGen")
         val pack = gen.createPack()
-
+        pack.addProvider(::ItemTagProvider)
 //        pack.addProvider(::TemplateWorldGenerator)
     }
 
