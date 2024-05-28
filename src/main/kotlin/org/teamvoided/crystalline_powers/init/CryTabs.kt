@@ -10,10 +10,10 @@ import org.teamvoided.crystalline_powers.CrystallinePowers.id
 object CryTabs {
     fun init() {}
     val CRYSTALLINE_POWERS_TAB = register(
-        "crystaline_powers_tab",
+        "crystalline_powers_tab",
         FabricItemGroup.builder()
             .icon { CryItems.AMETHYST_PENDANT.defaultStack }
-            .name(Text.translatable("Crystaline powers"))
+            .name(Text.translatable("Crystalline Powers"))
             .entries { _, entries ->
                 entries.addStacks(
                     mutableSetOf(

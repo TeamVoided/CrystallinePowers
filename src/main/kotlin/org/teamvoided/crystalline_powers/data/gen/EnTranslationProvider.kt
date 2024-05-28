@@ -15,12 +15,15 @@ class EnTranslationProvider(o: FabricDataOutput, r: CompletableFuture<HolderLook
     val items = listOf(
         CryItems.AMETHYST_PENDANT
     )
+
     override fun generateTranslations(lookup: HolderLookup.Provider, gen: TranslationBuilder) {
-        items.forEach{gen.add(it,genLang(it.id))}
+        items.forEach { gen.add(it, genLang(it.id)) }
 
         gen.add("trinkets.slot.chest.copper_slot", "Copper Slot")
-
+        gen.add("trinkets.slot.chest.iron_slot", "Iron Slot")
+        gen.add("trinkets.slot.chest.gold_slot", "Gold Slot")
     }
+
     private fun genLang(identifier: Identifier): String =
         identifier.path.split("_").joinToString(" ") { it.replaceFirstChar(Char::uppercaseChar) }
 

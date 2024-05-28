@@ -3,6 +3,8 @@
     "player"
   ],
   "slots": [
-    "chest/copper_slot"
+    "chest/copper_slot",
+    "chest/iron_slot",
+    "chest/gold_slot"
   ]
 }

@@ -12,6 +12,13 @@ class ItemTagProvider(o: FabricDataOutput, c: CompletableFuture<HolderLookup.Pro
 
     override fun configure(provider: HolderLookup.Provider) {
         getOrCreateTagBuilder(CryItemTags.COPPER_SLOT)
+            .addTag(CryItemTags.SLOT_CAPABLE_ITEM)
+        getOrCreateTagBuilder(CryItemTags.IRON_SLOT)
+            .addTag(CryItemTags.SLOT_CAPABLE_ITEM)
+        getOrCreateTagBuilder(CryItemTags.GOLD_SLOT)
+            .addTag(CryItemTags.SLOT_CAPABLE_ITEM)
+
+        getOrCreateTagBuilder(CryItemTags.SLOT_CAPABLE_ITEM)
             .add(CryItems.AMETHYST_PENDANT)
     }
 }
