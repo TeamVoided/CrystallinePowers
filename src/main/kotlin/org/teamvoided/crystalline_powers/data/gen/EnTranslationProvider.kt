@@ -17,6 +17,9 @@ class EnTranslationProvider(o: FabricDataOutput, r: CompletableFuture<HolderLook
     )
     override fun generateTranslations(lookup: HolderLookup.Provider, gen: TranslationBuilder) {
         items.forEach{gen.add(it,genLang(it.id))}
+
+        gen.add("trinkets.slot.chest.copper_slot", "Copper Slot")
+
     }
     private fun genLang(identifier: Identifier): String =
         identifier.path.split("_").joinToString(" ") { it.replaceFirstChar(Char::uppercaseChar) }
