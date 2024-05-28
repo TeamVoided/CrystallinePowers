@@ -7,17 +7,16 @@ import net.minecraft.data.client.model.BlockStateModelGenerator
 import net.minecraft.data.client.model.Models
 import org.teamvoided.crystalline_powers.init.CryItems
 
-class ModelCreator(o: FabricDataOutput) : FabricModelProvider(o) {
-    override fun generateBlockStateModels(gen: BlockStateModelGenerator) {
+class ModelProvider(o: FabricDataOutput) : FabricModelProvider(o) {
 
-    }
+    override fun generateBlockStateModels(gen: BlockStateModelGenerator) {}
 
     val items = listOf(
         CryItems.AMETHYST_PENDANT
     )
 
     override fun generateItemModels(gen: ItemModelGenerator) {
-        items.forEach{
+        items.forEach {
             gen.register(it, Models.SINGLE_LAYER_ITEM)
         }
     }

@@ -11,6 +11,5 @@ object CryItemTags {
 
     fun create(id: String): TagKey<Item> = TagKey.of(RegistryKeys.ITEM, id(id))
 
-
     fun createSlot(id: String): TagKey<Item> = TagKey.of(RegistryKeys.ITEM, Identifier("trinkets", id))
 }

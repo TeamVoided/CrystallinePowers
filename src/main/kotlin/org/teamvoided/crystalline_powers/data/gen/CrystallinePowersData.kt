@@ -10,7 +10,8 @@ class CrystallinePowersData : DataGeneratorEntrypoint {
         log.info("Hello from DataGen")
         val pack = gen.createPack()
         pack.addProvider(::ItemTagProvider)
-//        pack.addProvider(::TemplateWorldGenerator)
+        pack.addProvider(::EnTranslationProvider)
+        pack.addProvider(::ModelProvider)
     }
 
     override fun buildRegistry(gen: RegistrySetBuilder) {
