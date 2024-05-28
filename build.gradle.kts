@@ -38,7 +38,7 @@ modSettings {
     modName(mod_name)
 
     entrypoint("main", "org.teamvoided.crystalline_powers.CrystallinePowers::commonInit")
-    entrypoint("client", "org.teamvoided.crystalline_powers.CrystallinePowers::clientInit")
+    entrypoint("client", "org.teamvoided.crystalline_powers.client.CrystallinePowersClient::clientInit")
     entrypoint("fabric-datagen", "org.teamvoided.crystalline_powers.data.gen.CrystallinePowersData")
     mixinFile("$modid.mixins.json")
 

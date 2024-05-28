@@ -19,9 +19,5 @@ object CrystallinePowers {
         CryTabs.init()
     }
 
-    fun clientInit() {
-        log.info("Hello from Client")
-    }
-
     fun id(path: String) = Identifier(MODID, path)
 }
