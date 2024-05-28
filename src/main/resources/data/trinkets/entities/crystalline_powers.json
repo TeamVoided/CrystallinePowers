@@ -1,6 +1,11 @@
 {
   "entities": [
-    "player"
+    "player",
+    "zombie",
+    "skeleton",
+    "wither_skeleton",
+    "husk",
+    "stray"
   ],
   "slots": [
     "chest/copper_slot",
