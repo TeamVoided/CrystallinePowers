@@ -1,6 +1,5 @@
 package org.teamvoided.crystalline_powers.init
 
-import net.minecraft.component.DataComponentMap
 import net.minecraft.component.DataComponentType
 import net.minecraft.item.ItemStack
 import net.minecraft.network.codec.PacketCodecs
@@ -29,7 +28,7 @@ object CryComponents {
     fun ItemStack.getPendedCooldown(): Int? {
         val cooldown = this.components[COOLDOWN]
         if (this.item is AbstractPendantItem && cooldown == null) {
-            this.cooldown = 0
+            this.setPendedCooldown(0)
             return 0
         }
         return cooldown
@@ -38,8 +37,7 @@ object CryComponents {
     fun ItemStack.setPendedCooldown(cooldown: Int): ItemStack = this.addComponent(COOLDOWN, cooldown)
 
     fun <T> ItemStack.addComponent(type: DataComponentType<T>, value: T?): ItemStack {
-        this.applyComponents(DataComponentMap.builder().put(type, value).build())
+        this.set(type, value)
         return this
-
     }
 }
