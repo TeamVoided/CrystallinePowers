@@ -3,6 +3,7 @@ package org.teamvoided.crystalline_powers
 import net.minecraft.util.Identifier
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.teamvoided.crystalline_powers.init.CryComponents
 import org.teamvoided.crystalline_powers.init.CryItems
 import org.teamvoided.crystalline_powers.init.CryTabs
 
@@ -16,6 +17,7 @@ object CrystallinePowers {
     fun commonInit() {
         log.info("Hello from Common")
         CryItems.init()
+        CryComponents.init()
         CryTabs.init()
     }
 

@@ -6,12 +6,17 @@ import dev.emi.trinkets.api.TrinketsApi
 import net.minecraft.entity.LivingEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.server.network.ServerPlayerEntity
+import org.teamvoided.crystalline_powers.init.CryComponents.getPendedCooldown
+import org.teamvoided.crystalline_powers.init.CryComponents.setPendedCooldown
 import org.teamvoided.crystalline_powers.utils.PendentSlot
 import org.teamvoided.crystalline_powers.utils.getSlot
 
 abstract class AbstractPendantItem(settings: Settings) : TrinketItem(settings) {
 
     override fun tick(stack: ItemStack, slot: SlotReference, entity: LivingEntity) {
+        stack.getPendedCooldown()?.let { cooldown ->
+            if (cooldown > 0) stack.setPendedCooldown(cooldown - 1)
+        }
         getSlot(slot)?.let { tickInSlot(stack, it, slot, entity) }
     }
 
@@ -33,5 +38,9 @@ abstract class AbstractPendantItem(settings: Settings) : TrinketItem(settings) {
             }
         }
         return false
+    }
+
+    override fun getDefaultStack(): ItemStack {
+        return super.getDefaultStack().setPendedCooldown(0)
     }
 }
