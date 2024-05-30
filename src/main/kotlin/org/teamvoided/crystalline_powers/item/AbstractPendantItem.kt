@@ -17,7 +17,10 @@ abstract class AbstractPendantItem(settings: Settings) : TrinketItem(settings) {
         stack.getPendedCooldown()?.let { cooldown ->
             if (cooldown > 0) stack.setPendedCooldown(cooldown - 1)
         }
-        getSlot(slot)?.let { tickInSlot(stack, it, slot, entity) }
+        getSlot(slot)?.let {
+            val cooldown = stack.getPendedCooldown()
+            if (cooldown == null || cooldown <= 0) tickInSlot(stack, it, slot, entity)
+        }
     }
 
     open fun tickInSlot(stack: ItemStack, slot: PendentSlot, slotReference: SlotReference, entity: LivingEntity) {}
