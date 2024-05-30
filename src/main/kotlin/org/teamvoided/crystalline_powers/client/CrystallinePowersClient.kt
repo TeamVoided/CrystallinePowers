@@ -18,6 +18,5 @@ object CrystallinePowersClient {
         items.forEach() {
             TrinketRendererRegistry.registerRenderer(it, PendentRenderer())
         }
-        TrinketRendererRegistry.registerRenderer(CryItems.AMETHYST_PENDANT, PendentRenderer())
     }
 }

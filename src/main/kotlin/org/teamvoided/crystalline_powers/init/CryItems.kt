@@ -11,7 +11,7 @@ import org.teamvoided.crystalline_powers.item.StatusEffectPendantItem
 
 object CryItems {
     fun init() {}
-    val AMETHYST_PENDANT = register("amethyst_pendant", LeafstoneItem(Item.Settings()))
+    val AMETHYST_PENDANT = register("amethyst_pendant", LeafstoneItem(Item.Settings().maxCount(1)))
     val BLOODSTONE = register("bloodstone", StatusEffectPendantItem(Item.Settings().maxCount(1), StatusEffects.OOZING))
     val SOULSTONE = register("soulstone", StatusEffectPendantItem(Item.Settings().maxCount(1), StatusEffects.INSTANT_DAMAGE))
     fun register(id: String, item: Item): Item {
