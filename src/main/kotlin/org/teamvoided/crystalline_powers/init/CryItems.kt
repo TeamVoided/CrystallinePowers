@@ -6,11 +6,12 @@ import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import org.teamvoided.crystalline_powers.CrystallinePowers.id
 import org.teamvoided.crystalline_powers.item.AbstractPendantItem
+import org.teamvoided.crystalline_powers.item.LeafstoneItem
 import org.teamvoided.crystalline_powers.item.StatusEffectPendantItem
 
 object CryItems {
     fun init() {}
-    val AMETHYST_PENDANT = register("amethyst_pendant", StatusEffectPendantItem(Item.Settings().maxCount(1), StatusEffects.HASTE))
+    val AMETHYST_PENDANT = register("amethyst_pendant", LeafstoneItem(Item.Settings()))
     val BLOODSTONE = register("bloodstone", StatusEffectPendantItem(Item.Settings().maxCount(1), StatusEffects.OOZING))
     val SOULSTONE = register("soulstone", StatusEffectPendantItem(Item.Settings().maxCount(1), StatusEffects.INSTANT_DAMAGE))
     fun register(id: String, item: Item): Item {
