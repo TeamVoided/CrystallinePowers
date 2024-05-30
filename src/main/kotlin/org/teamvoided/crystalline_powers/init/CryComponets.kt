@@ -34,7 +34,7 @@ object CryComponents {
         return cooldown
     }
 
-    fun ItemStack.setPendedCooldown(cooldown: Int): ItemStack = this.addComponent(COOLDOWN, cooldown)
+    fun ItemStack.setPendedCooldown(cooldown: Int) = this.set(COOLDOWN, cooldown)
 
     fun <T> ItemStack.addComponent(type: DataComponentType<T>, value: T?): ItemStack {
         this.set(type, value)

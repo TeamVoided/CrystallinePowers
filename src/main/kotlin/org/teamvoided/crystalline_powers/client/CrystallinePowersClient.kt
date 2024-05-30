@@ -15,7 +15,7 @@ object CrystallinePowersClient {
 
     fun clientInit() {
         log.info("Hello from Client")
-        items.forEach() {
+        items.forEach {
             TrinketRendererRegistry.registerRenderer(it, PendentRenderer())
         }
     }
