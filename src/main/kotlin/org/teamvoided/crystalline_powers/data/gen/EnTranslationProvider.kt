@@ -13,7 +13,9 @@ import java.util.concurrent.CompletableFuture
 class EnTranslationProvider(o: FabricDataOutput, r: CompletableFuture<HolderLookup.Provider>) :
     FabricLanguageProvider(o, r) {
     val items = listOf(
-        CryItems.AMETHYST_PENDANT
+        CryItems.AMETHYST_PENDANT,
+        CryItems.BLOODSTONE,
+        CryItems.SOULSTONE,
     )
 
     override fun generateTranslations(lookup: HolderLookup.Provider, gen: TranslationBuilder) {

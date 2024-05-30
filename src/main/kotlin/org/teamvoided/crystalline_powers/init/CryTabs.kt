@@ -18,6 +18,8 @@ object CryTabs {
                 entries.addStacks(
                     mutableSetOf(
                         CryItems.AMETHYST_PENDANT.defaultStack,
+                        CryItems.BLOODSTONE.defaultStack,
+                        CryItems.SOULSTONE.defaultStack,
                     )
                 )
             }

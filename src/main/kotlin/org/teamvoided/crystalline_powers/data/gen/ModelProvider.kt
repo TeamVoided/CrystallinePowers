@@ -12,7 +12,9 @@ class ModelProvider(o: FabricDataOutput) : FabricModelProvider(o) {
     override fun generateBlockStateModels(gen: BlockStateModelGenerator) {}
 
     val items = listOf(
-        CryItems.AMETHYST_PENDANT
+        CryItems.AMETHYST_PENDANT,
+        CryItems.BLOODSTONE,
+        CryItems.SOULSTONE,
     )
 
     override fun generateItemModels(gen: ItemModelGenerator) {
