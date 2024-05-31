@@ -27,7 +27,7 @@ class StarstoneItem(settings: Settings) : AbstractPendantItem(settings) {
             val poseffect = Registries.STATUS_EFFECT.filter { it.isBeneficial }
                 .filter { !blacklist.contains(Holder.createDirect(it)) }.random()
             println("pos effect:" + poseffect.name.string)
-            val negeffect = Registries.STATUS_EFFECT.filter { !it.isBeneficial }
+            val negeffect = Registries.STATUS_EFFECT.filter { it.isBeneficial }
                 .filter { !blacklist.contains(Holder.createDirect(it)) }.random()
             println("neg effect:" + negeffect.name.string)
             var x = 0
