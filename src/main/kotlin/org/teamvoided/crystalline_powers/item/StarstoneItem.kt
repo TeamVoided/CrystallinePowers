@@ -21,7 +21,8 @@ class StarstoneItem(settings: Settings) : AbstractPendantItem(settings) {
                 StatusEffects.BAD_OMEN,
                 StatusEffects.TRIAL_OMEN,
                 StatusEffects.RAID_OMEN,
-                StatusEffects.WIND_CHARGED
+                StatusEffects.WIND_CHARGED,
+                StatusEffects.INSTANT_HEALTH,
             ).map { it.value() }
             val posEffect = Registries.STATUS_EFFECT.toList().filter { it.isBeneficial }
                 .filter { !blacklist.contains(it) }.random()
