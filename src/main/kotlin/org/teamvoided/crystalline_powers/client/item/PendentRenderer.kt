@@ -12,7 +12,6 @@ import net.minecraft.client.util.math.MatrixStack
 import net.minecraft.entity.LivingEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.util.math.Axis
-import org.teamvoided.crystalline_powers.item.StatusEffectPendantItem
 import org.teamvoided.crystalline_powers.utils.PendentSlot
 import org.teamvoided.crystalline_powers.utils.fixToHead
 import org.teamvoided.crystalline_powers.utils.getSlot
@@ -29,7 +28,6 @@ class PendentRenderer : TrinketRenderer {
         entity: LivingEntity, limbAngle: Float, limbDistance: Float, tickDelta: Float,
         animationProgress: Float, headYaw: Float, headPitch: Float
     ) {
-        if (stack.item !is StatusEffectPendantItem) return
         if (itemRenderer == null) itemRenderer = MinecraftClient.getInstance().itemRenderer
 
         val tick = animationProgress + (entity.uuid.toString().toByteArray().map { it.toFloat() }.sum()) +
