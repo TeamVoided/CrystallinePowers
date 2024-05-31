@@ -2,7 +2,6 @@ package org.teamvoided.crystalline_powers.item
 
 import dev.emi.trinkets.api.SlotReference
 import net.minecraft.entity.LivingEntity
-import net.minecraft.entity.effect.StatusEffect
 import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.item.ItemStack
@@ -14,11 +13,21 @@ import org.teamvoided.crystalline_powers.utils.PendentSlot
 class StarstoneItem(settings: Settings) : AbstractPendantItem(settings) {
     override fun tickInSlot(stack: ItemStack, slot: PendentSlot, slotReference: SlotReference, entity: LivingEntity) {
         if (!entity.world.isClient) {
-            val blacklist = listOf(StatusEffects.INSTANT_DAMAGE, StatusEffects.OOZING, StatusEffects.INFESTED, StatusEffects.WEAVING, StatusEffects.BAD_OMEN, StatusEffects.TRIAL_OMEN, StatusEffects.RAID_OMEN)
-            val poseffect = Registries.STATUS_EFFECT.filter { it.isBeneficial }.filter{ !blacklist.contains(Holder.createDirect(it)) }.random()
-            println("pos effect:" + poseffect.name.string)
-            val negeffect = Registries.STATUS_EFFECT.filter { !it.isBeneficial }.filter{ !blacklist.contains(Holder.createDirect(it)) }.random()
-            println("neg effect:" + negeffect.name.string)
+            val blacklist = listOf(
+                StatusEffects.INSTANT_DAMAGE,
+                StatusEffects.OOZING,
+                StatusEffects.INFESTED,
+                StatusEffects.WEAVING,
+                StatusEffects.BAD_OMEN,
+                StatusEffects.TRIAL_OMEN,
+                StatusEffects.RAID_OMEN
+            ).map { it.value() }
+            val posEffect = Registries.STATUS_EFFECT.filter { it.isBeneficial }
+                .filter { !blacklist.contains(it) }.random()
+            println("pos effect:" + posEffect.name.string)
+            val negEffect = Registries.STATUS_EFFECT.filter { !it.isBeneficial }
+                .filter { !blacklist.contains(it) }.random()
+            println("neg effect:" + negEffect.name.string)
             var x = 0
             var y = 0
             when (slot) {
@@ -37,8 +46,8 @@ class StarstoneItem(settings: Settings) : AbstractPendantItem(settings) {
                     y = 400
                 }
             }
-            entity.addStatusEffect(StatusEffectInstance(Holder.createDirect(poseffect), 400, x, false, false, true))
-            entity.addStatusEffect(StatusEffectInstance(Holder.createDirect(negeffect), 400, x, false, false, true))
+            entity.addStatusEffect(StatusEffectInstance(Holder.createDirect(posEffect), 400, x, false, false, true))
+            entity.addStatusEffect(StatusEffectInstance(Holder.createDirect(negEffect), 400, x, false, false, true))
             stack.setPendedCooldown(y)
         }
     }
