@@ -15,6 +15,9 @@ class ModelProvider(o: FabricDataOutput) : FabricModelProvider(o) {
         CryItems.AMETHYST_PENDANT,
         CryItems.BLOODSTONE,
         CryItems.SOULSTONE,
+        CryItems.LEAFSTONE,
+        CryItems.STARSTONE,
+        CryItems.GOLDINE,
     )
 
     override fun generateItemModels(gen: ItemModelGenerator) {

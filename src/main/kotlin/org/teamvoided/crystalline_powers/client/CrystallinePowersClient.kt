@@ -11,6 +11,9 @@ object CrystallinePowersClient {
         CryItems.AMETHYST_PENDANT,
         CryItems.SOULSTONE,
         CryItems.BLOODSTONE,
+        CryItems.LEAFSTONE,
+        CryItems.STARSTONE,
+        CryItems.GOLDINE,
     )
 
     fun clientInit() {

@@ -16,6 +16,9 @@ class EnTranslationProvider(o: FabricDataOutput, r: CompletableFuture<HolderLook
         CryItems.AMETHYST_PENDANT,
         CryItems.BLOODSTONE,
         CryItems.SOULSTONE,
+        CryItems.LEAFSTONE,
+        CryItems.STARSTONE,
+        CryItems.GOLDINE,
     )
 
     override fun generateTranslations(lookup: HolderLookup.Provider, gen: TranslationBuilder) {

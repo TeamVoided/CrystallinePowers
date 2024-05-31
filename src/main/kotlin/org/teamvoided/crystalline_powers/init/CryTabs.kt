@@ -20,6 +20,9 @@ object CryTabs {
                         CryItems.AMETHYST_PENDANT.defaultStack,
                         CryItems.BLOODSTONE.defaultStack,
                         CryItems.SOULSTONE.defaultStack,
+                        CryItems.LEAFSTONE.defaultStack,
+                        CryItems.STARSTONE.defaultStack,
+                        CryItems.GOLDINE.defaultStack,
                     )
                 )
             }

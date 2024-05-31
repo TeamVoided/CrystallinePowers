@@ -19,6 +19,13 @@ class ItemTagProvider(o: FabricDataOutput, c: CompletableFuture<HolderLookup.Pro
             .addTag(CryItemTags.SLOT_CAPABLE_ITEM)
 
         getOrCreateTagBuilder(CryItemTags.SLOT_CAPABLE_ITEM)
-            .add(CryItems.AMETHYST_PENDANT, CryItems.BLOODSTONE, CryItems.SOULSTONE,)
+            .add(
+                CryItems.AMETHYST_PENDANT,
+                CryItems.BLOODSTONE,
+                CryItems.SOULSTONE,
+                CryItems.LEAFSTONE,
+                CryItems.STARSTONE,
+                CryItems.GOLDINE,
+            )
     }
 }
