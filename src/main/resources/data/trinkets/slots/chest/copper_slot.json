@@ -1,5 +1,5 @@
 {
-  "icon": "trinkets:gui/slots/necklace",
+  "icon": "crystalline_powers:gui/slots/copper_slot",
   "order": -32,
   "validator_predicates": ["trinkets:tag"]
 }
