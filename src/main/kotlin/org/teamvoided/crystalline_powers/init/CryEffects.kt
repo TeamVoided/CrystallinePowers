@@ -21,6 +21,34 @@ object CryEffects {
             EntityAttributeModifier.Operation.ADD_VALUE
         )
     );
+    val SOUL_HEALTH = register(
+        "soul_health",
+        StatusEffect(StatusEffectType.BENEFICIAL, 16515918).addAttributeModifier(
+            EntityAttributes.GENERIC_MAX_HEALTH,
+            "e5f6df15-a32a-49c1-b01b-204bc0c0787f",
+                    2.0,
+                    EntityAttributeModifier.Operation.ADD_VALUE
+        )
+    );
+    val SOUL_SPEDD = register("soul_speed",StatusEffect(StatusEffectType.BENEFICIAL,5637116).addAttributeModifier(
+            EntityAttributes.GENERIC_MOVEMENT_SPEED,
+            "8c2a3c2c-8bac-4825-9f11-a54f17c32286",
+            0.01,
+            EntityAttributeModifier.Operation.ADD_VALUE
+            ))
+    val SOUL_ARMOUR = register("soul_armour", StatusEffect(StatusEffectType.BENEFICIAL,261123).addAttributeModifier(
+        EntityAttributes.GENERIC_ARMOR,
+        "fe47b018-bd6c-4ccb-a408-c502cd3b1d52",
+        2.0,
+        EntityAttributeModifier.Operation.ADD_VALUE
+    ))
+    val SOUL_TOUGHNESS = register("soul_toughness",StatusEffect(StatusEffectType.BENEFICIAL,16548867).addAttributeModifier(
+        EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
+        "caaa40eb-d129-45fd-b21a-2ea2d871cb18",
+        2.0,
+        EntityAttributeModifier.Operation.ADD_VALUE
+    ))
+
     private fun register(id: String, entry: StatusEffect): Holder<StatusEffect> {
         return Registry.registerHolder(Registries.STATUS_EFFECT, Identifier(id), entry)
     }

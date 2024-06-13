@@ -1,2 +1,2 @@
 accessWidener v2 named
-accessible method net/minecraft/entity/effect/StatusEffect <init> (Lnet/minecraft/entity/effect/StatusEffectType;ILnet/minecraft/particle/ParticleEffect;)V
+accessible method net/minecraft/entity/effect/StatusEffect <init> (Lnet/minecraft/entity/effect/StatusEffectType;I)V

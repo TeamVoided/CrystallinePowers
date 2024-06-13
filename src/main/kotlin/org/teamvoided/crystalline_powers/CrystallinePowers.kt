@@ -4,6 +4,7 @@ import net.minecraft.util.Identifier
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.teamvoided.crystalline_powers.init.CryComponents
+import org.teamvoided.crystalline_powers.init.CryEffects
 import org.teamvoided.crystalline_powers.init.CryItems
 import org.teamvoided.crystalline_powers.init.CryTabs
 
@@ -19,6 +20,7 @@ object CrystallinePowers {
         CryItems.init()
         CryComponents.init()
         CryTabs.init()
+        CryEffects.init()
     }
 
     fun id(path: String) = Identifier(MODID, path)
