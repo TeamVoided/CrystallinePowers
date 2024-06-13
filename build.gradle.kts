@@ -42,7 +42,7 @@ modSettings {
     entrypoint("fabric-datagen", "org.teamvoided.crystalline_powers.data.gen.CrystallinePowersData")
     mixinFile("$modid.mixins.json")
 
-//    accessWidener("$modid.accesswidener")
+    accessWidener("$modid.accesswidener")
 }
 
 dependencies {
