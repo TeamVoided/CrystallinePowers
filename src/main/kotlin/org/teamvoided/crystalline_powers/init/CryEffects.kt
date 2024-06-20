@@ -17,7 +17,7 @@ object CryEffects {
         StatusEffect(StatusEffectType.BENEFICIAL, 6684672).addAttributeModifier(
             EntityAttributes.GENERIC_ATTACK_DAMAGE,
             "40d91d12-4552-4941-84e0-fe47c7e8db72",
-            1.0,
+            0.1,
             EntityAttributeModifier.Operation.ADD_VALUE
         )
     );
@@ -26,7 +26,7 @@ object CryEffects {
         StatusEffect(StatusEffectType.BENEFICIAL, 16515918).addAttributeModifier(
             EntityAttributes.GENERIC_MAX_HEALTH,
             "e5f6df15-a32a-49c1-b01b-204bc0c0787f",
-            2.0,
+            0.5,
             EntityAttributeModifier.Operation.ADD_VALUE
         )
     );
@@ -34,7 +34,7 @@ object CryEffects {
         "soul_speed", StatusEffect(StatusEffectType.BENEFICIAL, 5637116).addAttributeModifier(
             EntityAttributes.GENERIC_MOVEMENT_SPEED,
             "8c2a3c2c-8bac-4825-9f11-a54f17c32286",
-            0.01,
+            0.001,
             EntityAttributeModifier.Operation.ADD_VALUE
         )
     )
@@ -42,7 +42,7 @@ object CryEffects {
         "soul_armour", StatusEffect(StatusEffectType.BENEFICIAL, 261123).addAttributeModifier(
             EntityAttributes.GENERIC_ARMOR,
             "fe47b018-bd6c-4ccb-a408-c502cd3b1d52",
-            2.0,
+            0.5,
             EntityAttributeModifier.Operation.ADD_VALUE
         )
     )
@@ -50,10 +50,19 @@ object CryEffects {
         "soul_toughness", StatusEffect(StatusEffectType.BENEFICIAL, 16548867).addAttributeModifier(
             EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
             "caaa40eb-d129-45fd-b21a-2ea2d871cb18",
-            2.0,
+            0.1,
             EntityAttributeModifier.Operation.ADD_VALUE
         )
     )
+    val NEW_BLOOD = register(
+        "new_blood",
+        StatusEffect(StatusEffectType.BENEFICIAL, 16515918).addAttributeModifier(
+            EntityAttributes.GENERIC_MAX_HEALTH,
+            "36353495-8431-4232-80ec-98a9d64c9b41",
+            10.0,
+            EntityAttributeModifier.Operation.ADD_VALUE
+        )
+    );
 
     private fun register(id: String, entry: StatusEffect): Holder<StatusEffect> {
         return Registry.registerHolder(Registries.STATUS_EFFECT, Identifier(id), entry)

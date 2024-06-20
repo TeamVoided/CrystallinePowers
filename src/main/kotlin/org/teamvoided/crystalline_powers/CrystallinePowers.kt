@@ -36,10 +36,10 @@ object CrystallinePowers {
 
     fun commonInit() {
         log.info("Hello from Common")
+        CryEffects.init()
         CryItems.init()
         CryComponents.init()
         CryTabs.init()
-        CryEffects.init()
         ServerLivingEntityEvents.AFTER_DEATH.register { target: LivingEntity, source: DamageSource ->
             val world = target.world as ServerWorld
             val killer = source.source
@@ -66,7 +66,7 @@ object CrystallinePowers {
                                     target.x,
                                     target.y,
                                     target.z,
-                                    100,
+                                    10,
                                     0.2,
                                     0.2,
                                     0.2,
@@ -85,7 +85,7 @@ object CrystallinePowers {
                                 player.addStatusEffect(
                                     StatusEffectInstance(
                                         effect,
-                                        24000, amplifier,
+                                        240, amplifier,
                                         false, false, true
                                     )
                                 )
@@ -94,7 +94,7 @@ object CrystallinePowers {
                         if (ironSlot != null && !ironSlot.isEmpty) {
                             val stack = ironSlot.getStack(0)
                             if (stack.item is SoulstoneItem) {
-                                for (i in 1..2) {
+                                for (i in 1..500) {
                                     val effect = CryEffects.soulEffects.random()
                                     var amplifier = -1
                                     world.spawnParticles(
@@ -102,7 +102,7 @@ object CrystallinePowers {
                                         target.x,
                                         target.y,
                                         target.z,
-                                        100,
+                                        20,
                                         0.2,
                                         0.2,
                                         0.2,
@@ -125,7 +125,7 @@ object CrystallinePowers {
                                     player.addStatusEffect(
                                         StatusEffectInstance(
                                             effect,
-                                            24000, amplifier,
+                                            240, amplifier,
                                             false, false, true
                                         )
                                     )
@@ -143,7 +143,7 @@ object CrystallinePowers {
                                         target.x,
                                         target.y,
                                         target.z,
-                                        100,
+                                        30,
                                         0.2,
                                         0.2,
                                         0.2,
@@ -166,7 +166,7 @@ object CrystallinePowers {
                                     player.addStatusEffect(
                                         StatusEffectInstance(
                                             effect,
-                                            24000, amplifier,
+                                            240, amplifier,
                                             false, false, true
                                         )
                                     )
